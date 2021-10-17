@@ -68,7 +68,7 @@
 				<details>
 					<summary>Import z JSONa</summary>
 					<p>Uwaga, niszczy dane w przeglądarce</p>
-					<input type="file" accept=".json|application/json" on:change={uploadJSON}>
+					<input type="file" accept=".json,application/json" on:change={uploadJSON}>
 				</details>
 				<p>Aby usunąć jakiś powtarzalny element należy usunąć z niego tekst</p>
 				<p>
