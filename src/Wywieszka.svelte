@@ -1,6 +1,8 @@
 <script lang="ts">
     import type { Author, Seminar, Talk } from "./utils";
     export let seminar: Seminar;
+
+    const intl = new Intl.DateTimeFormat("pl", {dateStyle: "long", timeStyle: "short"});
 </script>
 
 <body class="generatedBody" bgcolor={seminar.bgColor()}>
@@ -8,7 +10,7 @@
         <br />
         Seminarium: Systemy Rozproszone
         <br />
-        <data>{seminar.date().toLocaleDateString("pl")}</data>, godzina {seminar.date().toLocaleTimeString("pl")}{#if seminar.room}, sala {seminar.room}{/if}{#if seminar.onlineUrl}, <a href={seminar.onlineUrl}>transmisja online</a>{/if}
+        {intl.format(seminar.date())}{#if seminar.room}, sala {seminar.room}{/if}{#if seminar.onlineUrl}, <a href={seminar.onlineUrl}>transmisja online</a>{/if}
         <br />
 
         {#each seminar.allAuthors() as author, i}{#if i > 0}, {/if}<autor><imie>{author.firstName}</imie> <nazwisko>{author.lastName}</nazwisko></autor>{/each}
