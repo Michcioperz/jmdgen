@@ -25,6 +25,7 @@
     "@tsconfig/svelte": "^2.0.0"
   },
   "dependencies": {
+    "chart.js": "^3.6.2",
     "sirv-cli": "^1.0.0"
   }
 }

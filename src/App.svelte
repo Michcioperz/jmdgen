@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Author, Seminar, Talk } from "./utils";
 	import Wywieszka from "./Wywieszka.svelte";
+	import WykresMichalow from "./WykresMichalow.svelte";
 
 	const defaultSeminar = new Seminar(0, "2021-10-07T12:15", [new Talk(
 		"Reaktywny interfejs do wywieszek na seminarium Systemy Rozproszone",
@@ -130,6 +131,10 @@
 					</details>
 				</details>
 				{/each}
+				<details>
+					<summary>Ciekawy wykres</summary>
+					<WykresMichalow />
+				</details>
 			</td>
 			<td width="*">
 				<Wywieszka seminar={seminar} />
