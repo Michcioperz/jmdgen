@@ -5,7 +5,7 @@ export class Seminar {
     talks: Talk[];
     indexNumber: number;
 
-    constructor(indexNumber: number = 0, time: string = new Date().toISOString(), talks: Talk[] = [], room: string = "4070", onlineUrl: string = "https://meet.google.com/xmi-nyqs-xpd") {
+    constructor(indexNumber: number = 0, time: string = new Date().toISOString(), talks: Talk[] = [], room: string = "4070", onlineUrl: string = "") {
         this.indexNumber = indexNumber;
         this.time = time;
         this.talks = talks;
