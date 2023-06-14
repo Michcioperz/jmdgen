@@ -1,11 +1,10 @@
 <script lang="ts">
 	import { Author, Seminar, Talk } from "./utils";
 	import Wywieszka from "./Wywieszka.svelte";
-	import WykresMichalow from "./WykresMichalow.svelte";
 
 	const defaultSeminar = new Seminar(0, "2021-10-07T12:15", [new Talk(
 		"Reaktywny interfejs do wywieszek na seminarium Systemy Rozproszone",
-		[new Author("Michał", "Sidor")],
+		[new Author("Michalina", "Sidor")],
 		`<p>Szablon wywieszek na Systemy Rozproszone zawiera wiele naleciałości ze starego HTMLa i zaskakujących komentarzy. To <em>rozprasza</em> osoby przygotowujące prezentacje na seminarium.</p>\n<p>Przedstawię aplikację webową służącą do generowania wywieszek na stronę seminarium. Opiszę sposób działania frameworku Svelte.</p>`
 	), new Talk()]);
 
@@ -65,6 +64,9 @@
 				<p>
 					<button on:click={generateJSON}>Eksportuj JSON</button>
 					<button on:click={generateHTML}>Eksportuj HTML</button>
+				</p>
+				<p>
+					<a href="https://github.com/Michcioperz/jmdgen">Kod źródłowy generatora</a>
 				</p>
 				<details>
 					<summary>Import z JSONa</summary>
@@ -131,10 +133,6 @@
 					</details>
 				</details>
 				{/each}
-				<details>
-					<summary>Ciekawy wykres</summary>
-					<WykresMichalow />
-				</details>
 			</td>
 			<td width="*">
 				<Wywieszka seminar={seminar} />
